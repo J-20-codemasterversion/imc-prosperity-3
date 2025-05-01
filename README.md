@@ -30,13 +30,16 @@ We relied on open-source tools for visualization, which most teams did, however,
 
 A standalone Python backtester that powers all five rounds of IMC Prosperity 2025.  
 🔗 **[View on GitHub](https://github.com/jmerle/imc-prosperity-3-backtester/tree/master)**
-
+1. pip update/download before each round
+2. test according to round or trading day
 ---
 
 ## Visualization 🖥️
 
 An interactive, browser-based dashboard for exploring your P&L and order flows.  
 🔗 **[Live Visualizer](https://jmerle.github.io/imc-prosperity-3-visualizer/?/visualizer)**
+For visualization, remember to run the result from the logger version of the Trader Class, which would require one to use the formatting in the visualizer.py, adding the statement "# logger.flush(state=state, trader_data=trader_data, conversions=0, orders=result)" in the second last line.
+
 
 
 

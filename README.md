@@ -18,16 +18,27 @@ This repository contains research and algorithms for our team, Baroque, in IMC P
 IMC Prosperity 2025 was an algorithmic trading competition that lasted over 15 days, with over 15000 teams and 25000 participants globally. In this challenge, we were tasked with designing trading algorithms to maximize profits across a variety of simulated products—replicating real-world opportunities such as market making, statistical arbitrage, scalping, and locational arbitrage. Each team represented a virtual “island” trading SeaShells, the in-game currency, with fictional assets like Kelp, Squid Ink, Picnic Baskets (an ETF analogue), and Volcanic Rock Vouchers (an options analogue). In addition to algorithmic trading, each round featured a manual trading challenge, which would not be elaborated upon in this repo.
 
 ## Organization 📂
-This repository contains all of our code–including internal tools, research notebooks, raw data and backtesting logs, and all versions of our algorithmic trader. The repository is organized by round. Our backtester mostly remained unchanged from round 1, but we simply copied its files over to each subsequent round, so you'll find a version of that in each folder. Within each round, you can locate the algorithmic trading code we used in our final submission by looking for the latest version–for example, for round 1, we used round_1_v6.py for our final submission. Our visualization dashboard is located in the dashboard folder.
+This repository contains all of our code–including internal tools, research notebooks, raw data and backtesting logs, and all versions of our algorithmic trader. The repository is organized by round. Our backtester mostly remained unchanged from round 1, but we simply copied its files over to each subsequent round, so you'll find a version of that in each folder. Within each round, you can locate the algorithmic trading code we used in our final submission by looking for the latest version–for example, for round 1, we used round_1.py for our final submission. Our visualization dashboard is located in the dashboard folder.
 
 <details>
-  <summary><h1>tools 🛠️</h1></summary>
+  <summary><h1>Tools 🛠️</h1></summary>
+We relied on open-source tools for visualization, which most teams did, however, given the vague guidelines on how to use them, I would explain them here. They are respectively, Backtester and Visualation, developed by jmerle.
 
-  - **Python 3.10+** – backtester & data pipelines  
-  - **Docker** – reproducible local environment  
-  - **Makefile** – one-line commands for build/test/run  
-  - **VS Code** – with Python extensions  
-</details>
+---
+
+## Backtester 🔙
+
+A standalone Python backtester that powers all five rounds of IMC Prosperity 2025.  
+🔗 **[View on GitHub](https://github.com/jmerle/imc-prosperity-3-backtester/tree/master)**
+
+---
+
+## Visualization 🖥️
+
+An interactive, browser-based dashboard for exploring your P&L and order flows.  
+🔗 **[Live Visualizer](https://jmerle.github.io/imc-prosperity-3-visualizer/?/visualizer)**
+
+
 
 
 

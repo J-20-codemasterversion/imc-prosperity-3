@@ -51,7 +51,8 @@ Successful Implementation of visualizer would look like this:
 
 *This allows one to check the generic trading pattern and trace back to the timestamps when a trade was triggered.*
 <details>
-<summary>round 1 1️⃣</summary>
+<details>
+  <summary>round 1 1️⃣</summary>
 
 In round 1, we had access to two symbols to trade: **Rainforest Resin** and **Kelp**.
 

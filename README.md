@@ -1,4 +1,6 @@
-## trader info ✨
+# Baroque 📈
+This repository contains research and algorithms for our team, Baroque, in IMC Prosperity 2025. …
+## Trader Info ✨
 
 <table align="center">
   <tr>

@@ -58,7 +58,7 @@ In round 1, we had access to three symbols: Rainforest Resin, Kelp, and Ink.
   
 ## Rainforest Resin 🌴
 
-Price oscillated tightly between 9 992 and 10 008. We bought at ≤ 9 992 and sold at ≥ 10 008, capturing the full 16-point swing.
+Price oscillated tightly between 9 992 and 10 008. We bought at ≤ 9 992 and sold at ≥ 10 008, at several price levels, setting position contraints at each, capturing the full 16-point swing.
 ![rainforest-resin-price](https://github.com/user-attachments/assets/4233ff5b-fdde-4876-90d1-9c04d85fe944)
   
 ## Kelp 🌿
@@ -77,5 +77,32 @@ Buy back at the pre-bump baseline
 This bump-reversion strategy added ~ 8 % to our backtest P&L.
 ![squid-ink-price](https://github.com/user-attachments/assets/2bce0734-aed9-449e-911a-a7d5967747e2)
 
+
+</details>
+
+<details>
+  <summary><h1>round 2 2️⃣</h1></summary>
+
+In round 2, we had access to three new symbols: **Croissants**, **Jams**, **Djembes**, plus two synthetic Picnic Baskets.
+
+#### Croissants 🥐  
+Price oscillated between **4,265** and **4,280** with surprisingly tight spreads. We quickly realized the order book depth was asymmetric, with buy-side liquidity drying up during 120k-180k timestamps. Our solution: aggressive penny-posting on the bid side while maintaining defensive asks at +4 ticks.
+
+#### Jams 🍓  
+Featured wider spreads averaging **13,400-13,420** but with brutal inventory risk. The market showed clear directional bias during European hours (80k-140k timestamps), where we systematically bought strength and sold weakness. Our VWAP deviation model captured ~90% of the mean reversion opportunities.
+
+#### Djembes 🥁  
+Most volatile among the constituents, spiking between **6,620-6,660** unpredictably. We developed a custom signal based on the coefficient of variation over 500-tick windows, which successfully predicted 73% of the larger price swings. Position limit of 60 forced us to be surgical with entry timing.
+
+#### Picnic Basket 1 🧺  
+Contains: 6 Croissants + 3 Jams + 1 Djembes  
+Theoretical value calculation: `6*CP + 3*JP + 1*DP = P1_fair`  
+We detected persistent mispricing in the 20-50 SeaShell range, especially when underlying vols diverged. Our edge came from using weighted mid-prices (70% bid, 30% ask) rather than simple midpoints for fair value computation.
+
+#### Picnic Basket 2 🧺  
+Contains: 4 Croissants + 2 Jams  
+Simpler composition made arbitrage more reliable. The absence of Djembes reduced tracking error to <5 SeaShells. We noticed the basket traded stale during low liquidity periods (timestamps 0-30k and 180k+), creating alpha through aggressive inventory recycling.
+
+The butterfly arbitrage strategy added ~7% to our round P&L by exploiting pricing inefficiencies between baskets and their constituents, with our edge peaking during volatility spikes when liquidity providers pulled quotes.
 
 </details>

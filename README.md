@@ -50,30 +50,25 @@ Successful Implementation of visualizer would look like this:
 
 
 *This allows one to check the generic trading pattern and trace back to the timestamps when a trade was triggered.*
+
 <details>
-
-
 <summary>round 1 1️⃣</summary>
 
-In round 1, we had access to two symbols to trade: **Rainforest Resin** and **Kelp**.
+In round 1, we had access to three symbols: **Rainforest Resin**, **Kelp**, and **Ink**.
 
 #### Rainforest Resin 🌴  
-Oscillated tightly between **9 992** and **10 008**. We bought at ≤ 9 992 and sold at ≥ 10 008, capturing the full 16-point swing.  
-![Rainforest Resin Chart](https://github.com/user-attachments/assets/bc797dec-d1e1-47ee-8110-8b69fdb95e50)
+Price oscillated tightly between **9 992** and **10 008**. We bought at ≤ 9 992 and sold at ≥ 10 008, capturing the full 16-point swing.
 
 #### Kelp 🌿  
-Exhibited a **wide basis spread** with a drifting mid-price. We used a rolling-mean fair value over the last *n* timestamps (tuned in backtests) and placed symmetric bids/asks around it, profiting on mean-reversion.  
-![Kelp Chart](https://github.com/user-attachments/assets/d351767e-cad6-41e3-8408-1c3d164508f3)
+Featured a **wide basis spread** with a drifting mid-price. We used a rolling-mean fair value over the last *n* timestamps (tuned in backtests) and placed symmetric bids/asks around it, profiting on mean reversion.
 
 #### Ink 🖋️  
-Spiked sharply (“bumps”) then reverted to the **pre-bump** level. Our bump-reversion tactic:  
+Showed sharp **“bumps”** that reverted to the **pre-bump** level. Our tactic:  
 1. **Sell** at the spike peak  
 2. **Buy** back at the pre-bump baseline  
 
-This captured the full swing and boosted PnL by ~ 8%.  
-![Ink Bump-Reversion Chart](https://github.com/user-attachments/assets/52abe059-b1f7-4ebe-94d7-10ea18b214b1)
+This bump-reversion strategy added ~ 8 % to our backtest P&L.
 
 </details>
-
 
 

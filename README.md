@@ -53,30 +53,28 @@ Successful Implementation of visualizer would look like this:
 <details>
 
   
-  <summary>round 1 1️⃣</summary>
+<details>
+<summary>round 1 1️⃣</summary>
 
 In round 1, we had access to two symbols to trade: **Rainforest Resin** and **Kelp**.
 
 ### Rainforest Resin 🌴
-Rainforest Resin’s price oscillated tightly between **9 992** and **10 008**. We placed aggressive **buy** orders at or below 9 992 and **sell** orders at or above 10 008, capturing the entire 16-point swing on each cycle.
-<img width="727" alt="截屏2025-04-30 下午11 10 05" src="https://github.com/user-attachments/assets/bc797dec-d1e1-47ee-8110-8b69fdb95e50" />
+Rainforest Resin’s price oscillated tightly between **9 992** and **10 008**. We placed aggressive **buy** orders at or below 9 992 and **sell** orders at or above 10 008, capturing the entire 16-point swing on each cycle.  
+![Rainforest Resin Chart](https://github.com/user-attachments/assets/bc797dec-d1e1-47ee-8110-8b69fdb95e50)
 
 ### Kelp 🌿
-Kelp exhibited a **wide basis spread** with a drifting mid-price. We computed a **dynamic fair value** (rolling‐mean of the last *n* timestamps, tuned in backtests) and placed symmetric bids/asks around it, profiting whenever the price mean-reverted.
-<img width="730" alt="截屏2025-04-30 下午11 09 41" src="https://github.com/user-attachments/assets/d351767e-cad6-41e3-8408-1c3d164508f3" />
+Kelp exhibited a **wide basis spread** with a drifting mid-price. We computed a **dynamic fair value** (rolling mean over the last *n* timestamps, tuned via backtests) and placed symmetric bids/asks around it, profiting whenever the price mean-reverted.  
+![Kelp Chart](https://github.com/user-attachments/assets/d351767e-cad6-41e3-8408-1c3d164508f3)
 
 ### Ink 🖋️
-Ink’s price showed distinct **“bumps”** (sharp spikes) that reliably reverted to the **pre-bump** level. We flagged a bump when the mid-price jumped by over 10 seashells in 5 timestamps, then:
+Ink’s price showed distinct **“bumps”**—sharp spikes that reliably reverted to the **pre-bump** level. We flagged a bump when the mid-price jumped by **> 10 seashells** in 5 timestamps, then:  
 1. **Sold** at the spike peak  
 2. **Bought** back at the pre-bump baseline  
 
-This bump–reversion tactic captured the full swing and boosted our backtest P&L by ~8%.
-<img width="729" alt="截屏2025-04-30 下午11 11 07" src="https://github.com/user-attachments/assets/52abe059-b1f7-4ebe-94d7-10ea18b214b1" />
+This bump-reversion tactic captured the full swing and boosted our backtest PnL by ~ 8%.  
+![Ink Bump-Reversion Chart](https://github.com/user-attachments/assets/52abe059-b1f7-4ebe-94d7-10ea18b214b1)
 
 </details>
-
-
-
 
 
 

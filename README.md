@@ -135,7 +135,9 @@ Following the algorithm challenge hint, we implemented a parabolic curve-fitting
 <details>
   <summary><h1>round 4 4️⃣</h1></summary>
 In round 4, we gained access to Magnificent Macarons, a luxury item with complex pricing dynamics.
+  
 #### Magnificent Macarons 🥐
+  
 This product traded with a 75-unit position limit and 10-unit conversion restriction. Pricing depended on multiple factors: sunlight index, sugar futures, transport costs, tariffs, and storage capacity. After analyzing historical data, we identified a critical sunlight threshold. Below this level, macaron prices would spike substantially as supply constraints kicked in.
 We employed several strategies:
 

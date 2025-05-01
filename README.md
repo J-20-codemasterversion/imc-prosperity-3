@@ -14,10 +14,11 @@ This repository contains research and algorithms for our team, Baroque, in IMC P
   </tr>
 </table>
 
-## the competition 🏆
-IMC Prosperity 2024 was an algorithmic trading competition that lasted over 15 days, with over 15000 teams and 25000 participants globally. In the challenge, we were tasked with algorithmically trading various products, such as amethysts, starfruit, orchids, coconuts, and more, with the goal of maximizing seashells: the underlying currency of our island. We started trading amethysts and starfruit in round 1, and with each subsequent round, more products were added. At the end of each round, our trading algorithm was evaluated against bot participants in the marketplace, whose behavior we could try and predict through historical data. The PNL from this independent evaluation would then be compared against all other teams.
+## The Competition 🏆
+IMC Prosperity 2025 was an algorithmic trading competition that lasted over 15 days, with over 15000 teams and 25000 participants globally. In this challenge, we were tasked with designing trading algorithms to maximize profits across a variety of simulated products—replicating real-world opportunities such as market making, statistical arbitrage, scalping, and locational arbitrage. Each team represented a virtual “island” trading SeaShells, the in-game currency, with fictional assets like Kelp, Squid Ink, Picnic Baskets (an ETF analogue), and Volcanic Rock Vouchers (an options analogue). In addition to algorithmic trading, each round featured a manual trading challenge, which would not be elaborated upon in this repo.
 
-In addition to the main algorithmic trading focus, the competition also consisted of manual trading challenges in each round. The focus of these varied widely, and in the end, manual trading accounted for just a small fraction of our PNL.
+##organization 📂
+This repository contains all of our code–including internal tools, research notebooks, raw data and backtesting logs, and all versions of our algorithmic trader. The repository is organized by round. Our backtester mostly remained unchanged from round 1, but we simply copied its files over to each subsequent round, so you'll find a version of that in each folder. Within each round, you can locate the algorithmic trading code we used in our final submission by looking for the latest version–for example, for round 1, we used round_1_v6.py for our final submission. Our visualization dashboard is located in the dashboard folder.
 
-For documentation on the algorithmic trading environment, and more context about the competition, feel free to consult the Prosperity 2 Wiki.
-
+<details>
+  <summary>tools 🛠️</summary>

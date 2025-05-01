@@ -106,3 +106,29 @@ Simpler composition made arbitrage more reliable. The absence of Djembes reduced
 The butterfly arbitrage strategy added ~7% to our round P&L by exploiting pricing inefficiencies between baskets and their constituents, with our edge peaking during volatility spikes when liquidity providers pulled quotes.
 
 </details>
+<details>
+  <summary><h1>round 3 3️⃣</h1></summary>
+
+In round 3, we traded **Volcanic Rock** and five **Volcanic Rock Vouchers** (call options) with different strike prices.
+
+#### Volcanic Rock 🌋  
+Price maintained a stable trading range between **9,900** and **10,100**, centered around 10,000. We observed reduced liquidity during early timestamps (0-50k), allowing for profitable market-making with wider spreads. Our strategy evolved to dynamic spread adjustments based on time of day and order book depth.
+
+#### Voucher_9500 🎫  
+Deep in-the-money option trading close to intrinsic value. During elevated volatility periods, we identified 8-12 SeaShell pricing discrepancies that provided opportunity for delta-neutral arbitrage. Strike K = 9,500 remained profitable due to its liquid market and tight bid-ask spreads.
+
+#### Voucher_9750 🎫  
+Near-ATM option with strike K = 9,750 displayed higher sensitivity to underlying price movements. Price fluctuated between 248-280 shells. We focused on theta decay exploitation while managing delta exposure through regular hedging.
+
+#### Voucher_10000 🎫  
+ATM option became the benchmark, trading actively in the 275-310 range. We established relative value trades between this and the 9750 voucher, capitalizing on implied volatility disparities across strikes.
+
+#### Voucher_10250 🎫  
+First OTM option at K = 10,250 traded with premiums ranging 160-180 shells. While we generally avoided OTM options, we occasionally entered when volatility pricing appeared mispriced relative to our forecasts.
+
+#### Voucher_10500 🎫  
+Far OTM option at K = 10,500 showed minimal trading activity, rarely exceeding 115 shells. We maintained a consistent short premium strategy with strict position limits to manage tail risk.
+
+Following the algorithm challenge hint, we implemented a parabolic curve-fitting approach for implied volatility moneyness relationships. By plotting v_t against m_t = log(K/S_t)/sqrt(TTE), we identified arbitrage opportunities in the volatility surface. This strategy contributed ~3% to our round P&L.
+
+</details>

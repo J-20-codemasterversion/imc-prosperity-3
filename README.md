@@ -23,6 +23,14 @@ This repository contains all of our code–including internal tools, research no
 <details>
   <summary><big><strong>tools 🛠️</strong></big></summary>
 
+  - **Python 3.10+** – our backtester and data pipelines  
+  - **Docker** – reproducible environment for local testing  
+  - **Makefile** – one-line commands for build/test/run  
+  - **VS Code** – with your favorite Python extensions  
+
+</details>
+
+
 
 
 

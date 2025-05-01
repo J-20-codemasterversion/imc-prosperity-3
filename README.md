@@ -55,11 +55,11 @@ Successful Implementation of visualizer would look like this:
 <details>
   <summary><h1>round 1 1️⃣</h1></summary>
 In round 1, we had access to three symbols: Rainforest Resin, Kelp, and Ink.
-Rainforest Resin 🌴
+## Rainforest Resin 🌴
 Price oscillated tightly between 9 992 and 10 008. We bought at ≤ 9 992 and sold at ≥ 10 008, capturing the full 16-point swing.
-Kelp 🌿
+## Kelp 🌿
 Featured a wide basis spread with a drifting mid-price. We used a rolling-mean fair value over the last n timestamps (tuned in backtests) and placed symmetric bids/asks around it, profiting on mean reversion.
-Ink 🖋️
+## Ink 🖋️
 Showed sharp "bumps" that reverted to the pre-bump level. Our tactic:
 
 Sell at the spike peak

@@ -20,17 +20,18 @@ IMC Prosperity 2025 was an algorithmic trading competition that lasted over 15 d
 ## Organization 📂
 This repository contains all of our code–including internal tools, research notebooks, raw data and backtesting logs, and all versions of our algorithmic trader. The repository is organized by round. Our backtester mostly remained unchanged from round 1, but we simply copied its files over to each subsequent round, so you'll find a version of that in each folder. Within each round, you can locate the algorithmic trading code we used in our final submission by looking for the latest version–for example, for round 1, we used round_1_v6.py for our final submission. Our visualization dashboard is located in the dashboard folder.
 
-## Tools 🛠️
+---
 
 <details>
   <summary>tools 🛠️</summary>
 
   - **Python 3.10+** – backtester & data pipelines  
-  - **Docker** – reproducible environment for local testing  
+  - **Docker** – reproducible local environment  
   - **Makefile** – one‐line commands for build/test/run  
   - **VS Code** – with Python extensions  
 
 </details>
+
 
 
 

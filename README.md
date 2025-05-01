@@ -132,3 +132,16 @@ Far OTM option at K = 10,500 showed minimal trading activity, rarely exceeding 1
 Following the algorithm challenge hint, we implemented a parabolic curve-fitting approach for implied volatility moneyness relationships. By plotting v_t against m_t = log(K/S_t)/sqrt(TTE), we identified arbitrage opportunities in the volatility surface. This strategy contributed ~3% to our round P&L.
 
 </details>
+<details>
+  <summary><h1>round 4 4️⃣</h1></summary>
+In round 4, we gained access to Magnificent Macarons, a luxury item with complex pricing dynamics.
+#### Magnificent Macarons 🥐
+This product traded with a 75-unit position limit and 10-unit conversion restriction. Pricing depended on multiple factors: sunlight index, sugar futures, transport costs, tariffs, and storage capacity. After analyzing historical data, we identified a critical sunlight threshold. Below this level, macaron prices would spike substantially as supply constraints kicked in.
+We employed several strategies:
+
+Sunlight Index Trading: Built a model around the sunlight threshold for entry timing
+Factor Correlation: Capitalized on relationships between macarons, sugar, and shipping markets
+Inventory Control: Managed the 1 SeaShell/timestamp storage cost through tactical position sizing
+
+Standard bid-ask spreads ran 8-15 SeaShells based on market volatility. When sunlight readings dropped below our threshold, we shifted to accumulating positions ahead of anticipated price surges. Above threshold, we returned to standard market-making with symmetric quotes.
+

@@ -38,18 +38,40 @@ A standalone Python backtester that powers all five rounds of IMC Prosperity 202
 
 An interactive, browser-based dashboard for exploring your P&L and order flows.  
 🔗 **[Live Visualizer](https://jmerle.github.io/imc-prosperity-3-visualizer/?/visualizer)**
-For visualization, remember to run the result from the logger version of the Trader Class, which would require one to use the formatting in the visualizer.py, adding the statement "# logger.flush(state=state, trader_data=trader_data, conversions=0, orders=result)" in the s<img width="1495" alt="截屏2025-04-30 下午10 45 45" src="https://github.com/user-attachments/assets/2a8fb95f-490a-4eeb-8303-cbc380194796" />
-econd last line.
+For visualization, remember to run the result from the logger version of the Trader Class, which would require one to use the formatting in the visualizer.py(paste the Trader Class within visualizer.py), adding the statement "# logger.flush(state=state, trader_data=trader_data, conversions=0, orders=result)" in the second last line.
 
-
+Successful Implementation of visualizer would look like this:
 
 <img width="1495" alt="截屏2025-04-30 下午10 45 45" src="https://github.com/user-attachments/assets/b0614899-e9a4-47ac-9fee-04a385f48f0b" />
 
 
 
-
 <img width="1490" alt="截屏2025-04-30 下午10 46 11" src="https://github.com/user-attachments/assets/496da8cb-81fa-4c4b-8bd6-688b675eb476" />
 
+
+*This allows one to check the generic trading pattern and trace back to the timestamps when a trade was triggered.*
+<details>
+<summary>round 1 1️⃣</summary>
+
+In round 1, we had access to two symbols to trade: **Rainforest Resin** and **Kelp**.
+
+### Rainforest Resin 🌴
+Rainforest Resin’s price oscillated tightly between **9 992** and **10 008**. We placed aggressive **buy** orders at or below 9 992 and **sell** orders at or above 10 008, capturing the entire 16-point swing on each cycle.
+<img width="727" alt="截屏2025-04-30 下午11 10 05" src="https://github.com/user-attachments/assets/bc797dec-d1e1-47ee-8110-8b69fdb95e50" />
+
+### Kelp 🌿
+Kelp exhibited a **wide basis spread** with a drifting mid-price. We computed a **dynamic fair value** (rolling‐mean of the last *n* timestamps, tuned in backtests) and placed symmetric bids/asks around it, profiting whenever the price mean-reverted.
+<img width="730" alt="截屏2025-04-30 下午11 09 41" src="https://github.com/user-attachments/assets/d351767e-cad6-41e3-8408-1c3d164508f3" />
+
+### Ink 🖋️
+Ink’s price showed distinct **“bumps”** (sharp spikes) that reliably reverted to the **pre-bump** level. We flagged a bump when the mid-price jumped by over 10 seashells in 5 timestamps, then:
+1. **Sold** at the spike peak  
+2. **Bought** back at the pre-bump baseline  
+
+This bump–reversion tactic captured the full swing and boosted our backtest P&L by ~8%.
+<img width="729" alt="截屏2025-04-30 下午11 11 07" src="https://github.com/user-attachments/assets/52abe059-b1f7-4ebe-94d7-10ea18b214b1" />
+
+</details>
 
 
 

@@ -38,7 +38,19 @@ A standalone Python backtester that powers all five rounds of IMC Prosperity 202
 
 An interactive, browser-based dashboard for exploring your P&L and order flows.  
 🔗 **[Live Visualizer](https://jmerle.github.io/imc-prosperity-3-visualizer/?/visualizer)**
-For visualization, remember to run the result from the logger version of the Trader Class, which would require one to use the formatting in the visualizer.py, adding the statement "# logger.flush(state=state, trader_data=trader_data, conversions=0, orders=result)" in the second last line.
+For visualization, remember to run the result from the logger version of the Trader Class, which would require one to use the formatting in the visualizer.py, adding the statement "# logger.flush(state=state, trader_data=trader_data, conversions=0, orders=result)" in the s<img width="1495" alt="截屏2025-04-30 下午10 45 45" src="https://github.com/user-attachments/assets/2a8fb95f-490a-4eeb-8303-cbc380194796" />
+econd last line.
+
+
+
+<img width="1495" alt="截屏2025-04-30 下午10 45 45" src="https://github.com/user-attachments/assets/b0614899-e9a4-47ac-9fee-04a385f48f0b" />
+
+
+
+
+<img width="1490" alt="截屏2025-04-30 下午10 46 11" src="https://github.com/user-attachments/assets/496da8cb-81fa-4c4b-8bd6-688b675eb476" />
+
+
 
 
 

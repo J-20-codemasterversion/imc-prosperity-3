@@ -51,8 +51,6 @@ Successful Implementation of visualizer would look like this:
 
 *This allows one to check the generic trading pattern and trace back to the timestamps when a trade was triggered.*
 
-<details> 
-
 <details>
   <summary><h1>round 1 1️⃣</h1></summary>
 

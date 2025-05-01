@@ -51,7 +51,7 @@ Successful Implementation of visualizer would look like this:
 
 *This allows one to check the generic trading pattern and trace back to the timestamps when a trade was triggered.*
 
-<details> <summary><h1>round 1 🔢</h1></summary>
+<details> <summary><h1>round 1 1️⃣</h1></summary>
 In round 1, we had access to three symbols: Rainforest Resin, Kelp, and Ink.
 Rainforest Resin 🌴
 Price oscillated tightly between 9 992 and 10 008. We bought at ≤ 9 992 and sold at ≥ 10 008, capturing the full 16-point swing.
@@ -63,3 +63,4 @@ Sell at the spike peak
 Buy back at the pre-bump baseline
 This bump-reversion strategy added ~ 8 % to our backtest P&L.
 </details>
+

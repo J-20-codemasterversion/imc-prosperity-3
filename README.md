@@ -1,5 +1,5 @@
 # Baroque 📈
-This repository contains research and algorithms for our team, Baroque, in IMC Prosperity 2025. …
+This repository contains research and algorithms for my team, Baroque, in IMC Prosperity 2025, we were ranked 126 among roughly 15000 teams
 ## Trader Info ✨
 <table align="center">
 <table>
